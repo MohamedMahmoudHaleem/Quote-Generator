@@ -2,8 +2,8 @@
 const qContainer = document.getElementById("quote-container");
 const quote = document.getElementById("quote");
 const author = document.getElementById("author");
-const newQuote = document.getElementById("new-quote");
-const x = document.getElementById("x");
+const newQuoteBtn = document.getElementById("new-quote");
+const xBtn = document.getElementById("x");
 const loader = document.getElementById("loader");
 
 const apiUrl = "https://jacintodesign.github.io/quotes-api/data/quotes.json";
@@ -13,7 +13,7 @@ let apiQuotes = [];
 function geneRandomQoute() {
   const q = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
   if (q.text.includes("Isra")) {
-    quote.innerText = "كســـم الصهاينه ";
+    quote.innerText = "Free Free Palestine";
     // console.log(q.text,q.author)
     // author.innerText = "محمـــد محمـــود ";
     return;
@@ -42,10 +42,10 @@ function postQuote() {
 //on click
 // newQuote.addEventListener("click", getData);
 ["keydown", "click"].forEach((ev) => {
-  newQuote.addEventListener(ev, getData);
+  newQuoteBtn.addEventListener(ev, getData);
 });
 
-x.addEventListener("click", postQuote);
+xBtn.addEventListener("click", postQuote);
 
 //q container hide
 window.addEventListener("load", function () {
