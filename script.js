@@ -15,7 +15,7 @@ function geneRandomQoute() {
   if (q.text.includes("Isra")) {
     quote.innerText = "Free Free Palestine";
     // console.log(q.text,q.author)
-    // author.innerText = "محمـــد محمـــود ";
+    author.innerText = "محمـــد محمـــود ";
     return;
   }
   quote.innerText = q.text;
@@ -40,10 +40,8 @@ function postQuote() {
   window.open(xUrl, "_blank");
 }
 //on click
-// newQuote.addEventListener("click", getData);
-["keydown", "click"].forEach((ev) => {
-  newQuoteBtn.addEventListener(ev, getData);
-});
+
+newQuoteBtn.addEventListener("click", getData);
 
 xBtn.addEventListener("click", postQuote);
 
